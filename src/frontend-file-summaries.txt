@@ -1,0 +1,9 @@
+{
+  "frontend/src/App.tsx": "Main app component showcasing PWA features with install prompt, platform capabilities explanation, and installation instructions for mobile and desktop.",
+  "frontend/src/index.css": "Updated design tokens with blue-indigo color scheme using OKLCH color system for both light and dark modes.",
+  "frontend/tailwind.config.js": "Enhanced Tailwind configuration with custom font families (Inter, Poppins) and refined design tokens matching the informational page aesthetic.",
+  "frontend/index.html": "HTML entry point with PWA meta tags including theme-color and manifest link for Progressive Web App functionality.",
+  "frontend/public/manifest.json": "Web App Manifest defining PWA metadata including name, icons, display mode, theme colors, and app configuration.",
+  "frontend/public/sw.js": "Service worker implementing cache-first strategy for static assets and network-first strategy for API calls with offline support.",
+  "frontend/src/main.tsx": "Application entry point with React initialization and service worker registration for PWA functionality."
+}

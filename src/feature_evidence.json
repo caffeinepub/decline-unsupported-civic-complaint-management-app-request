@@ -1,0 +1,95 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-web-app-manifest-manifest-json-to-frontend-public-with-appropriate-metadata-including-name-short-name-description-theme-color-background-color-display-mode-set-to-standalone-start-url-and-icons-array-with-multiple-sizes-192x192-512x512",
+      "featureTitle": "Add a Web App Manifest (manifest.json) to frontend/public with appropriate metadata including name, short_name, description, theme_color, background_color, display mode set to 'standalone', start_url, and icons array with multiple sizes (192x192, 512x512)",
+      "files": [
+        "frontend/public/manifest.json"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-link-the-web-app-manifest-in-frontend-index-html-using-a-link-tag-with-rel-manifest-pointing-to-manifest-json",
+      "featureTitle": "Link the Web App Manifest in frontend/index.html using a link tag with rel='manifest' pointing to /manifest.json",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-service-worker-file-sw-js-in-frontend-public-that-implements-basic-caching-strategies-for-offline-functionality-including-cache-first-for-static-assets-and-network-first-for-api-calls",
+      "featureTitle": "Create a service worker file (sw.js) in frontend/public that implements basic caching strategies for offline functionality including cache-first for static assets and network-first for API calls",
+      "files": [
+        "frontend/public/sw.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-theme-color-meta-tag-to-frontend-index-html-that-matches-the-application-s-primary-color-scheme-for-consistent-browser-chrome-styling",
+      "featureTitle": "Add theme-color meta tag to frontend/index.html that matches the application's primary color scheme for consistent browser chrome styling",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-pwa-icon-images-in-multiple-sizes-at-minimum-192x192-and-512x512-with-a-design-that-represents-the-application-identity-saved-to-frontend-public-assets-generated",
+      "featureTitle": "Generate PWA icon images in multiple sizes (at minimum 192x192 and 512x512) with a design that represents the application identity, saved to frontend/public/assets/generated",
+      "files": [
+        "frontend/public/manifest.json"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

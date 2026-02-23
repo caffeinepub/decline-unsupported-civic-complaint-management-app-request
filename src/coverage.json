@@ -1,0 +1,96 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-23T07:13:29.059Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 6,
+    "implemented": 5,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Add a Web App Manifest (manifest.json) to frontend/public with appropriate metadata including name, short_name, description, theme_color, background_color, display mode set to 'standalone', start_url, and icons array with multiple sizes (192x192, 512x512)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/manifest.json"
+        ],
+        "matchedFiles": [
+          "frontend/public/manifest.json"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Link the Web App Manifest in frontend/index.html using a link tag with rel='manifest' pointing to /manifest.json",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html"
+        ],
+        "matchedFiles": [
+          "frontend/index.html"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create a service worker file (sw.js) in frontend/public that implements basic caching strategies for offline functionality including cache-first for static assets and network-first for API calls",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/sw.js"
+        ],
+        "matchedFiles": [
+          "frontend/public/sw.js"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Register the service worker in frontend/src/main.tsx after the React app renders, with proper error handling and browser support detection",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/src/main.tsx"
+        ],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Add theme-color meta tag to frontend/index.html that matches the application's primary color scheme for consistent browser chrome styling",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html"
+        ],
+        "matchedFiles": [
+          "frontend/index.html"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Generate PWA icon images in multiple sizes (at minimum 192x192 and 512x512) with a design that represents the application identity, saved to frontend/public/assets/generated",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/manifest.json"
+        ],
+        "matchedFiles": [
+          "frontend/public/manifest.json"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/public/assets/generated/pwa-icon.dim_192x192.png",
+    "frontend/public/assets/generated/pwa-icon.dim_512x512.png",
+    "frontend/public/manifest.json",
+    "frontend/public/sw.js",
+    "frontend/src/App.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

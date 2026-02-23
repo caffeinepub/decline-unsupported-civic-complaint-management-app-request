@@ -1,0 +1,105 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Convert to Progressive Web App (PWA)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add Web App Manifest with PWA metadata",
+      "acceptanceCriteria": [
+        "manifest.json exists in frontend/public directory",
+        "Manifest includes all required PWA fields",
+        "Display mode is set to 'standalone' for app-like experience",
+        "Icons array includes at least 192x192 and 512x512 sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/manifest.json",
+          "operation": "create",
+          "description": "Create Web App Manifest with name 'Civic Platform', short_name, description, theme_color matching the application's blue-indigo color scheme, background_color, display set to 'standalone', start_url set to '/', and icons array referencing frontend/public/assets/generated/pwa-icon.dim_192x192.png and frontend/public/assets/generated/pwa-icon.dim_512x512.png"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Link Web App Manifest in HTML",
+      "acceptanceCriteria": [
+        "Link tag for manifest is present in the head section of index.html",
+        "Manifest link uses correct path to manifest.json"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add <link rel='manifest' href='/manifest.json'> tag to the head section to enable PWA functionality"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create service worker with caching strategies",
+      "acceptanceCriteria": [
+        "Service worker file exists at frontend/public/sw.js",
+        "Service worker implements caching for static assets",
+        "Service worker handles offline scenarios gracefully",
+        "Service worker uses appropriate cache strategies for different resource types"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/sw.js",
+          "operation": "create",
+          "description": "Create service worker implementing cache-first strategy for static assets (JS, CSS, images, fonts) and network-first strategy for API calls and canister requests, with install, activate, and fetch event handlers, ensuring compatibility with Internet Computer canister calls"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Register service worker in main application entry",
+      "acceptanceCriteria": [
+        "Service worker registration code is added to main.tsx",
+        "Registration includes browser compatibility check",
+        "Error handling is implemented for registration failures",
+        "Registration occurs after React app initialization"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Add service worker registration after ReactDOM.render() using navigator.serviceWorker.register('/sw.js') with 'serviceWorker' in navigator check for browser support and try-catch error handling for registration failures"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add theme-color meta tag for browser chrome styling",
+      "acceptanceCriteria": [
+        "Theme-color meta tag is present in index.html head section",
+        "Color value matches the application's design system primary color"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add <meta name='theme-color' content='#4f46e5'> tag to head section matching the application's blue-indigo primary color from the design system"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Wire generated PWA icons into manifest",
+      "acceptanceCriteria": [
+        "Icon files are generated in frontend/public/assets/generated directory",
+        "At least two icon sizes are provided: 192x192 and 512x512",
+        "Icons have transparent or appropriate backgrounds",
+        "Icons are referenced correctly in manifest.json"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/manifest.json",
+          "operation": "modify",
+          "description": "Ensure icons array references the generated images at frontend/public/assets/generated/pwa-icon.dim_192x192.png and frontend/public/assets/generated/pwa-icon.dim_512x512.png with correct sizes, type 'image/png', and purpose 'any maskable' for compatibility"
+        }
+      ]
+    }
+  ]
+}

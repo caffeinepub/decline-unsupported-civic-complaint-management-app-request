@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Progressive Web App (PWA) requested as alternative to mobile app",
+  "architectural_notes": [
+    "PWA implementation requested as alternative to native mobile app"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- PWA app icon with modern design representing a civic platform, suitable for transparent background (pwa-icon.dim_192x192.png)\n- PWA app icon with modern design representing a civic platform, suitable for transparent background, larger size (pwa-icon.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-add-a-web-app-manifest-manifest-json-to-frontend-public-with-appropriate-metadata-including-name-short-name-description-theme-color-background-color-display-mode-set-to-standalone-start-url-and-icons-array-with-multiple-sizes-192x192-512x512",
+      "title": "Add a Web App Manifest (manifest.json) to frontend/public with appropriate metadata including name, short_name, description, theme_color, background_color, display mode set to 'standalone', start_url, and icons array with multiple sizes (192x192, 512x512)",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-link-the-web-app-manifest-in-frontend-index-html-using-a-link-tag-with-rel-manifest-pointing-to-manifest-json",
+      "title": "Link the Web App Manifest in frontend/index.html using a link tag with rel='manifest' pointing to /manifest.json",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-service-worker-file-sw-js-in-frontend-public-that-implements-basic-caching-strategies-for-offline-functionality-including-cache-first-for-static-assets-and-network-first-for-api-calls",
+      "title": "Create a service worker file (sw.js) in frontend/public that implements basic caching strategies for offline functionality including cache-first for static assets and network-first for API calls",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-theme-color-meta-tag-to-frontend-index-html-that-matches-the-application-s-primary-color-scheme-for-consistent-browser-chrome-styling",
+      "title": "Add theme-color meta tag to frontend/index.html that matches the application's primary color scheme for consistent browser chrome styling",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-pwa-icon-images-in-multiple-sizes-at-minimum-192x192-and-512x512-with-a-design-that-represents-the-application-identity-saved-to-frontend-public-assets-generated",
+      "title": "Generate PWA icon images in multiple sizes (at minimum 192x192 and 512x512) with a design that represents the application identity, saved to frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Convert to Progressive Web App (PWA)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Register the service worker in frontend/src/main.tsx after the React app renders, with proper error handling and browser support detection",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Decline unsupported civic complaint management app request",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

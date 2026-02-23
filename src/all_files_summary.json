@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend canister entry point.",
+  "feature_evidence.json": "Feature evidence report documenting five PWA-related features including manifest creation, service worker implementation, icon generation, and HTML meta tags with high confidence levels.",
+  "frontend-file-summaries.txt": "JSON object containing summaries of frontend files describing PWA implementation including App component, styling, service worker, and manifest configuration.",
+  "frontend/index.css": "Tailwind CSS configuration with custom design tokens using OKLCH color system for light and dark modes with comprehensive color variables for UI components.",
+  "frontend/index.html": "HTML entry point with PWA meta tags including theme-color, manifest link, and viewport configuration for Progressive Web App functionality.",
+  "frontend/public/manifest.json": "Web App Manifest defining PWA metadata including app name, icons, display mode (standalone), theme colors, and orientation settings.",
+  "frontend/public/sw.js": "Service worker implementing cache-first strategy for static assets, network-first for API/canister calls, with offline fallback support and cache management.",
+  "frontend/src/App.tsx": "Main React component displaying PWA features, installation instructions, and an install button using the beforeinstallprompt event for app installation.",
+  "frontend/src/hooks/useActor.ts": "React hook managing backend actor creation with authentication support, handling both anonymous and authenticated identities with query invalidation on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient configuration with delegation handling.",
+  "frontend/src/index.css": "Tailwind CSS configuration file defining CSS custom properties for light and dark themes using OKLCH color space, including colors for UI elements, charts, and base styles.",
+  "frontend/src/main.tsx": "React application entry point that sets up the root render with QueryClient for data fetching and InternetIdentityProvider for authentication context.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the default theme with custom colors using OKLCH values, typography, container queries, animations, and custom font families (Inter and Poppins).",
+  "project_state.json": "Project state tracking file documenting PWA implementation requirements, including completed features (manifest, service worker, icons) and pending tasks (service worker registration in main.tsx)."
+}
